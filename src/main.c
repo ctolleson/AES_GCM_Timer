@@ -1,7 +1,35 @@
+/**
+ * 
+ * https://academy.nordicsemi.com/courses/nrf-connect-sdk-fundamentals/lessons/lesson-3-printing-messages-to-console-and-logging/topic/printk-function/#:~:text=However%2C%20printk()%20is%20a,d%20%2C%20%25i%20and%20its%20subcategories
+ * For printing basic messages on a console, we can use the printk() method. 
+ * The syntax printk() is similar to the standard printf() in C, you can provide either
+ *  a string literal or a format string followed by one or more variables to be printed. 
+ * However, printk() is a less advanced function that only supports a subset of the features 
+ * that printf() does, making it optimized for embedded development.
+ * 
+ * Installation instructions help.
+ * 
+ * 
+ */
+
+
 /*
  * Copyright (c) 2021 Nordic Semiconductor ASA
  *
  * SPDX-License-Identifier: LicenseRef-Nordic-5-Clause
+ * 
+ * Sources of information to help. 
+ * https://docs.nordicsemi.com/bundle/ncs-2.4.0/page/zephyr/kernel/timing_functions/index.html
+ * https://www.google.com/search?client=safari&rls=en&q=convert+nanoseconds+to+seconds&ie=UTF-8&oe=UTF-8
+ * https://www.argenox.com/library/bluetooth-low-energy/ble-advertising-primer/
+ * https://arm-software.github.io/psa-api/crypto/1.1/api/ops/aead.html#c.psa_aead_encrypt
+ * 
+ * Benchmarks 
+ * https://www.wolfssl.com/docs/benchmarks/
+ * https://os.mbed.com/teams/mbed-os-examples/code/mbed-os-example-tls-benchmark/file/0af60cd5226d/main.cpp/
+ * 
+ * 
+ * 
  */
 
 #include <zephyr/kernel.h>
@@ -12,7 +40,14 @@
 #include <psa/crypto.h>
 #include <psa/crypto_extra.h>
 
-#include <zephyr/timing/timing.h> 
+
+
+#define CAPTURE_TIMING 
+
+
+#ifdef	CAPTURE_TIMING
+#include <zephyr/timing/timing.h>
+#endif 
 
 #ifdef CONFIG_BUILD_WITH_TFM
 #include <tfm_ns_interface.h>
@@ -59,7 +94,7 @@ static uint8_t m_encrypted_text[NRF_CRYPTO_EXAMPLE_AES_MAX_TEXT_SIZE +
 
 static uint8_t m_decrypted_text[NRF_CRYPTO_EXAMPLE_AES_MAX_TEXT_SIZE];
 
-static psa_key_handle_t key_handle;
+static psa_key_id_t key_id;
 /* ====================================================================== */
 
 int crypto_init(void)
@@ -80,7 +115,7 @@ int crypto_finish(void)
 	psa_status_t status;
 
 	/* Destroy the key handle */
-	status = psa_destroy_key(key_handle);
+	status = psa_destroy_key(key_id);
 	if (status != PSA_SUCCESS) {
 		LOG_INF("psa_destroy_key failed! (Error: %d)", status);
 		return APP_ERROR;
@@ -107,7 +142,7 @@ int generate_key(void)
 	/* Generate a random key. The key is not exposed to the application,
 	 * we can use it to encrypt/decrypt using the key handle
 	 */
-	status = psa_generate_key(&key_attributes, &key_handle);
+	status = psa_generate_key(&key_attributes, &key_id);
 	if (status != PSA_SUCCESS) {
 		LOG_INF("psa_generate_key failed! (Error: %d)", status);
 		return APP_ERROR;
@@ -136,7 +171,7 @@ int encrypt_aes_gcm(void)
 	}
 
 	/* Encrypt the plaintext and create the authentication tag */
-	status = psa_aead_encrypt(key_handle,
+	status = psa_aead_encrypt(key_id,
 				  PSA_ALG_GCM,
 				  m_iv,
 				  sizeof(m_iv),
@@ -169,7 +204,7 @@ int decrypt_aes_gcm(void)
 	LOG_INF("Decrypting using AES GCM MODE...");
 
 	/* Decrypt and authenticate the encrypted data */
-	status = psa_aead_decrypt(key_handle,
+	status = psa_aead_decrypt(key_id,
 				  PSA_ALG_GCM,
 				  m_iv,
 				  sizeof(m_iv),
@@ -201,14 +236,19 @@ int decrypt_aes_gcm(void)
 int main(void)
 {
 	int status;
-	
-	timing_t start_time, end_time;
-	uint64_t total_cycles;
-	uint64_t total_ns; 
 
+	#ifdef	CAPTURE_TIMING
 
-	timing_init();
-	timing_start();
+		//variables needed for capturing the time elapsed.
+		timing_t start_time, end_time;
+		uint64_t total_cycles;
+		uint64_t total_ns;
+
+		// initiate the timer and start it counting...
+		timing_init();
+		timing_start(); 
+
+	#endif
 
 	LOG_INF("Starting AES-GCM example...");
 
@@ -224,27 +264,30 @@ int main(void)
 		return APP_ERROR;
 	}
 
-	start_time = timing_counter_get();
+	#ifdef	CAPTURE_TIMING
+		start_time = timing_counter_get();
+	#endif
 
 	status = encrypt_aes_gcm();
+	
+	#ifdef CAPTURE_TIMING
+		end_time = timing_counter_get();
+		
+		total_cycles = timing_cycles_get(&start_time, &end_time);
+		total_ns = timing_cycles_to_ns(total_cycles);
+		//total_ms = total_ns/1000000.0;
 
-	end_time = timing_counter_get();
+		timing_stop();
 
+		printk("Total nanoseconds to run encrypt AES GCM is %llu\n",total_ns);
+		LOG_INF("Total nanoseconds to run encrypt AES GCM is %llu\n", total_ns); 
+	#endif
+	
 	if (status != APP_SUCCESS) {
 		LOG_INF(APP_ERROR_MESSAGE);
 		return APP_ERROR;
 	}
-	
-	total_cycles = timing_cycles_get(&start_time, &end_time);
-	total_ns = timing_cycles_to_ns(total_cycles);
 
-	timing_stop();
-
-	printk("Total nanoseconds to run encrypt AES-GCM is %llu.\n", total_ns);
-
-	LOG_INF("Logging total nanoseconds to run %llu.\n", total_ns);
-
-	
 	status = decrypt_aes_gcm();
 	if (status != APP_SUCCESS) {
 		LOG_INF(APP_ERROR_MESSAGE);
