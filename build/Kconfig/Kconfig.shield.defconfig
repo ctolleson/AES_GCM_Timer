@@ -1,2 +1,2 @@
-osource "c:/users/christolleson/git/aes_gcm/boards/shields/*/Kconfig.defconfig"
-osource "C:/ncs/v2.3.0/nrf/boards/shields/*/Kconfig.defconfig"
+osource "c:/git/aes_gcm_timer/boards/shields/*/Kconfig.defconfig"
+osource "C:/ncs/v2.6.2/nrf/boards/shields/*/Kconfig.defconfig"

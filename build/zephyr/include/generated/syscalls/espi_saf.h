@@ -8,6 +8,8 @@
 
 #ifndef _ASMLANGUAGE
 
+#include <stdarg.h>
+
 #include <syscall_list.h>
 #include <zephyr/syscall.h>
 
@@ -37,7 +39,7 @@ static inline int espi_saf_config(const struct device * dev, const struct espi_s
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define espi_saf_config(dev, cfg) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_ESPI_SAF_CONFIG, espi_saf_config, dev, cfg); 	retval = espi_saf_config(dev, cfg); 	sys_port_trace_syscall_exit(K_SYSCALL_ESPI_SAF_CONFIG, espi_saf_config, dev, cfg, retval); 	retval; })
+#define espi_saf_config(dev, cfg) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_ESPI_SAF_CONFIG, espi_saf_config, dev, cfg); 	syscall__retval = espi_saf_config(dev, cfg); 	sys_port_trace_syscall_exit(K_SYSCALL_ESPI_SAF_CONFIG, espi_saf_config, dev, cfg, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -61,7 +63,7 @@ static inline int espi_saf_set_protection_regions(const struct device * dev, con
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define espi_saf_set_protection_regions(dev, pr) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_ESPI_SAF_SET_PROTECTION_REGIONS, espi_saf_set_protection_regions, dev, pr); 	retval = espi_saf_set_protection_regions(dev, pr); 	sys_port_trace_syscall_exit(K_SYSCALL_ESPI_SAF_SET_PROTECTION_REGIONS, espi_saf_set_protection_regions, dev, pr, retval); 	retval; })
+#define espi_saf_set_protection_regions(dev, pr) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_ESPI_SAF_SET_PROTECTION_REGIONS, espi_saf_set_protection_regions, dev, pr); 	syscall__retval = espi_saf_set_protection_regions(dev, pr); 	sys_port_trace_syscall_exit(K_SYSCALL_ESPI_SAF_SET_PROTECTION_REGIONS, espi_saf_set_protection_regions, dev, pr, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -84,7 +86,7 @@ static inline int espi_saf_activate(const struct device * dev)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define espi_saf_activate(dev) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_ESPI_SAF_ACTIVATE, espi_saf_activate, dev); 	retval = espi_saf_activate(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_ESPI_SAF_ACTIVATE, espi_saf_activate, dev, retval); 	retval; })
+#define espi_saf_activate(dev) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_ESPI_SAF_ACTIVATE, espi_saf_activate, dev); 	syscall__retval = espi_saf_activate(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_ESPI_SAF_ACTIVATE, espi_saf_activate, dev, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -107,7 +109,7 @@ static inline bool espi_saf_get_channel_status(const struct device * dev)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define espi_saf_get_channel_status(dev) ({ 	bool retval; 	sys_port_trace_syscall_enter(K_SYSCALL_ESPI_SAF_GET_CHANNEL_STATUS, espi_saf_get_channel_status, dev); 	retval = espi_saf_get_channel_status(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_ESPI_SAF_GET_CHANNEL_STATUS, espi_saf_get_channel_status, dev, retval); 	retval; })
+#define espi_saf_get_channel_status(dev) ({ 	bool syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_ESPI_SAF_GET_CHANNEL_STATUS, espi_saf_get_channel_status, dev); 	syscall__retval = espi_saf_get_channel_status(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_ESPI_SAF_GET_CHANNEL_STATUS, espi_saf_get_channel_status, dev, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -131,7 +133,7 @@ static inline int espi_saf_flash_read(const struct device * dev, struct espi_saf
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define espi_saf_flash_read(dev, pckt) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_ESPI_SAF_FLASH_READ, espi_saf_flash_read, dev, pckt); 	retval = espi_saf_flash_read(dev, pckt); 	sys_port_trace_syscall_exit(K_SYSCALL_ESPI_SAF_FLASH_READ, espi_saf_flash_read, dev, pckt, retval); 	retval; })
+#define espi_saf_flash_read(dev, pckt) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_ESPI_SAF_FLASH_READ, espi_saf_flash_read, dev, pckt); 	syscall__retval = espi_saf_flash_read(dev, pckt); 	sys_port_trace_syscall_exit(K_SYSCALL_ESPI_SAF_FLASH_READ, espi_saf_flash_read, dev, pckt, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -155,7 +157,7 @@ static inline int espi_saf_flash_write(const struct device * dev, struct espi_sa
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define espi_saf_flash_write(dev, pckt) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_ESPI_SAF_FLASH_WRITE, espi_saf_flash_write, dev, pckt); 	retval = espi_saf_flash_write(dev, pckt); 	sys_port_trace_syscall_exit(K_SYSCALL_ESPI_SAF_FLASH_WRITE, espi_saf_flash_write, dev, pckt, retval); 	retval; })
+#define espi_saf_flash_write(dev, pckt) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_ESPI_SAF_FLASH_WRITE, espi_saf_flash_write, dev, pckt); 	syscall__retval = espi_saf_flash_write(dev, pckt); 	sys_port_trace_syscall_exit(K_SYSCALL_ESPI_SAF_FLASH_WRITE, espi_saf_flash_write, dev, pckt, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -179,7 +181,7 @@ static inline int espi_saf_flash_erase(const struct device * dev, struct espi_sa
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define espi_saf_flash_erase(dev, pckt) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_ESPI_SAF_FLASH_ERASE, espi_saf_flash_erase, dev, pckt); 	retval = espi_saf_flash_erase(dev, pckt); 	sys_port_trace_syscall_exit(K_SYSCALL_ESPI_SAF_FLASH_ERASE, espi_saf_flash_erase, dev, pckt, retval); 	retval; })
+#define espi_saf_flash_erase(dev, pckt) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_ESPI_SAF_FLASH_ERASE, espi_saf_flash_erase, dev, pckt); 	syscall__retval = espi_saf_flash_erase(dev, pckt); 	sys_port_trace_syscall_exit(K_SYSCALL_ESPI_SAF_FLASH_ERASE, espi_saf_flash_erase, dev, pckt, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 

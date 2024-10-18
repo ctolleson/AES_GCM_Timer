@@ -8,6 +8,8 @@
 
 #ifndef _ASMLANGUAGE
 
+#include <stdarg.h>
+
 #include <syscall_list.h>
 #include <zephyr/syscall.h>
 
@@ -58,7 +60,7 @@ static inline bool log_process(void)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define log_process() ({ 	bool retval; 	sys_port_trace_syscall_enter(K_SYSCALL_LOG_PROCESS, log_process); 	retval = log_process(); 	sys_port_trace_syscall_exit(K_SYSCALL_LOG_PROCESS, log_process, retval); 	retval; })
+#define log_process() ({ 	bool syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_LOG_PROCESS, log_process); 	syscall__retval = log_process(); 	sys_port_trace_syscall_exit(K_SYSCALL_LOG_PROCESS, log_process, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -80,7 +82,7 @@ static inline uint32_t log_buffered_cnt(void)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define log_buffered_cnt() ({ 	uint32_t retval; 	sys_port_trace_syscall_enter(K_SYSCALL_LOG_BUFFERED_CNT, log_buffered_cnt); 	retval = log_buffered_cnt(); 	sys_port_trace_syscall_exit(K_SYSCALL_LOG_BUFFERED_CNT, log_buffered_cnt, retval); 	retval; })
+#define log_buffered_cnt() ({ 	uint32_t syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_LOG_BUFFERED_CNT, log_buffered_cnt); 	syscall__retval = log_buffered_cnt(); 	sys_port_trace_syscall_exit(K_SYSCALL_LOG_BUFFERED_CNT, log_buffered_cnt, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -106,7 +108,7 @@ static inline uint32_t log_filter_set(struct log_backend const *const backend, u
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define log_filter_set(backend, domain_id, source_id, level) ({ 	uint32_t retval; 	sys_port_trace_syscall_enter(K_SYSCALL_LOG_FILTER_SET, log_filter_set, backend, domain_id, source_id, level); 	retval = log_filter_set(backend, domain_id, source_id, level); 	sys_port_trace_syscall_exit(K_SYSCALL_LOG_FILTER_SET, log_filter_set, backend, domain_id, source_id, level, retval); 	retval; })
+#define log_filter_set(backend, domain_id, source_id, level) ({ 	uint32_t syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_LOG_FILTER_SET, log_filter_set, backend, domain_id, source_id, level); 	syscall__retval = log_filter_set(backend, domain_id, source_id, level); 	sys_port_trace_syscall_exit(K_SYSCALL_LOG_FILTER_SET, log_filter_set, backend, domain_id, source_id, level, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 

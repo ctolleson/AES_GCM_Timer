@@ -1,0 +1,13 @@
+# Target labels
+ tfm
+# Source files and their labels
+C:/Git/AES_GCM_Timer/build/modules/trusted-firmware-m/CMakeFiles/tfm
+C:/Git/AES_GCM_Timer/build/modules/trusted-firmware-m/CMakeFiles/tfm.rule
+C:/Git/AES_GCM_Timer/build/modules/trusted-firmware-m/CMakeFiles/tfm-complete.rule
+C:/Git/AES_GCM_Timer/build/modules/trusted-firmware-m/tfm-prefix/src/tfm-stamp/tfm-build.rule
+C:/Git/AES_GCM_Timer/build/modules/trusted-firmware-m/tfm-prefix/src/tfm-stamp/tfm-configure.rule
+C:/Git/AES_GCM_Timer/build/modules/trusted-firmware-m/tfm-prefix/src/tfm-stamp/tfm-download.rule
+C:/Git/AES_GCM_Timer/build/modules/trusted-firmware-m/tfm-prefix/src/tfm-stamp/tfm-install.rule
+C:/Git/AES_GCM_Timer/build/modules/trusted-firmware-m/tfm-prefix/src/tfm-stamp/tfm-mkdir.rule
+C:/Git/AES_GCM_Timer/build/modules/trusted-firmware-m/tfm-prefix/src/tfm-stamp/tfm-patch.rule
+C:/Git/AES_GCM_Timer/build/modules/trusted-firmware-m/tfm-prefix/src/tfm-stamp/tfm-update.rule

@@ -8,6 +8,8 @@
 
 #ifndef _ASMLANGUAGE
 
+#include <stdarg.h>
+
 #include <syscall_list.h>
 #include <zephyr/syscall.h>
 
@@ -37,7 +39,7 @@ static inline int mbox_send(const struct mbox_channel * channel, const struct mb
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define mbox_send(channel, msg) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_MBOX_SEND, mbox_send, channel, msg); 	retval = mbox_send(channel, msg); 	sys_port_trace_syscall_exit(K_SYSCALL_MBOX_SEND, mbox_send, channel, msg, retval); 	retval; })
+#define mbox_send(channel, msg) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_MBOX_SEND, mbox_send, channel, msg); 	syscall__retval = mbox_send(channel, msg); 	sys_port_trace_syscall_exit(K_SYSCALL_MBOX_SEND, mbox_send, channel, msg, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -60,7 +62,7 @@ static inline int mbox_mtu_get(const struct device * dev)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define mbox_mtu_get(dev) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_MBOX_MTU_GET, mbox_mtu_get, dev); 	retval = mbox_mtu_get(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_MBOX_MTU_GET, mbox_mtu_get, dev, retval); 	retval; })
+#define mbox_mtu_get(dev) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_MBOX_MTU_GET, mbox_mtu_get, dev); 	syscall__retval = mbox_mtu_get(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_MBOX_MTU_GET, mbox_mtu_get, dev, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -84,7 +86,7 @@ static inline int mbox_set_enabled(const struct mbox_channel * channel, bool ena
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define mbox_set_enabled(channel, enable) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_MBOX_SET_ENABLED, mbox_set_enabled, channel, enable); 	retval = mbox_set_enabled(channel, enable); 	sys_port_trace_syscall_exit(K_SYSCALL_MBOX_SET_ENABLED, mbox_set_enabled, channel, enable, retval); 	retval; })
+#define mbox_set_enabled(channel, enable) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_MBOX_SET_ENABLED, mbox_set_enabled, channel, enable); 	syscall__retval = mbox_set_enabled(channel, enable); 	sys_port_trace_syscall_exit(K_SYSCALL_MBOX_SET_ENABLED, mbox_set_enabled, channel, enable, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -107,7 +109,7 @@ static inline uint32_t mbox_max_channels_get(const struct device * dev)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define mbox_max_channels_get(dev) ({ 	uint32_t retval; 	sys_port_trace_syscall_enter(K_SYSCALL_MBOX_MAX_CHANNELS_GET, mbox_max_channels_get, dev); 	retval = mbox_max_channels_get(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_MBOX_MAX_CHANNELS_GET, mbox_max_channels_get, dev, retval); 	retval; })
+#define mbox_max_channels_get(dev) ({ 	uint32_t syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_MBOX_MAX_CHANNELS_GET, mbox_max_channels_get, dev); 	syscall__retval = mbox_max_channels_get(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_MBOX_MAX_CHANNELS_GET, mbox_max_channels_get, dev, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 

@@ -1,7 +1,7 @@
-# 0 "C:/ncs/v2.3.0/zephyr/misc/empty_file.c"
+# 0 "C:/ncs/v2.6.2/zephyr/misc/empty_file.c"
 # 0 "<built-in>"
 # 0 "<command-line>"
-# 1 "C:/ncs/v2.3.0/nrf/boards/arm/nrf7002dk_nrf5340/nrf7002dk_nrf5340_cpuapp_ns.dts" 1
+# 1 "C:/ncs/v2.6.2/nrf/boards/arm/nrf7002dk_nrf5340/nrf7002dk_nrf5340_cpuapp_ns.dts" 1
 
 
 
@@ -9,29 +9,29 @@
 
 
 /dts-v1/;
-# 1 "C:/ncs/v2.3.0/zephyr/dts/arm/nordic/nrf5340_cpuappns_qkaa.dtsi" 1 3 4
+# 1 "C:/ncs/v2.6.2/zephyr/dts/arm/nordic/nrf5340_cpuappns_qkaa.dtsi" 1 3 4
 
 
 
 
 
 
-# 1 "C:/ncs/v2.3.0/zephyr/dts/common/mem.h" 1 3 4
-# 8 "C:/ncs/v2.3.0/zephyr/dts/arm/nordic/nrf5340_cpuappns_qkaa.dtsi" 2 3 4
-# 1 "C:/ncs/v2.3.0/zephyr/dts/arm/nordic/nrf5340_cpuappns.dtsi" 1 3 4
-# 9 "C:/ncs/v2.3.0/zephyr/dts/arm/nordic/nrf5340_cpuappns.dtsi" 3 4
-# 1 "C:/ncs/v2.3.0/zephyr/dts/arm/armv8-m.dtsi" 1 3 4
+# 1 "C:/ncs/v2.6.2/zephyr/dts/common/mem.h" 1 3 4
+# 8 "C:/ncs/v2.6.2/zephyr/dts/arm/nordic/nrf5340_cpuappns_qkaa.dtsi" 2 3 4
+# 1 "C:/ncs/v2.6.2/zephyr/dts/arm/nordic/nrf5340_cpuappns.dtsi" 1 3 4
+# 9 "C:/ncs/v2.6.2/zephyr/dts/arm/nordic/nrf5340_cpuappns.dtsi" 3 4
+# 1 "C:/ncs/v2.6.2/zephyr/dts/arm/armv8-m.dtsi" 1 3 4
 
 
-# 1 "C:/ncs/v2.3.0/zephyr/dts/common/skeleton.dtsi" 1 3 4
-# 9 "C:/ncs/v2.3.0/zephyr/dts/common/skeleton.dtsi" 3 4
+# 1 "C:/ncs/v2.6.2/zephyr/dts/common/skeleton.dtsi" 1 3 4
+# 9 "C:/ncs/v2.6.2/zephyr/dts/common/skeleton.dtsi" 3 4
 / {
  #address-cells = <1>;
  #size-cells = <1>;
  chosen { };
  aliases { };
 };
-# 4 "C:/ncs/v2.3.0/zephyr/dts/arm/armv8-m.dtsi" 2 3 4
+# 4 "C:/ncs/v2.6.2/zephyr/dts/arm/armv8-m.dtsi" 2 3 4
 
 / {
  soc {
@@ -55,44 +55,63 @@
   };
  };
 };
-# 10 "C:/ncs/v2.3.0/zephyr/dts/arm/nordic/nrf5340_cpuappns.dtsi" 2 3 4
-# 1 "C:/ncs/v2.3.0/zephyr/dts/arm/nordic/nrf_common.dtsi" 1 3 4
+# 10 "C:/ncs/v2.6.2/zephyr/dts/arm/nordic/nrf5340_cpuappns.dtsi" 2 3 4
+# 1 "C:/ncs/v2.6.2/zephyr/dts/common/nordic/nrf_common.dtsi" 1 3 4
 
 
 
 
 
 
-# 1 "C:/ncs/v2.3.0/zephyr/include/zephyr/dt-bindings/adc/adc.h" 1 3 4
-# 8 "C:/ncs/v2.3.0/zephyr/dts/arm/nordic/nrf_common.dtsi" 2 3 4
-# 1 "C:/ncs/v2.3.0/zephyr/include/zephyr/dt-bindings/adc/nrf-adc.h" 1 3 4
-# 10 "C:/ncs/v2.3.0/zephyr/include/zephyr/dt-bindings/adc/nrf-adc.h" 3 4
-# 1 "C:/ncs/v2.3.0/zephyr/include/zephyr/dt-bindings/dt-util.h" 1 3 4
-# 19 "C:/ncs/v2.3.0/zephyr/include/zephyr/dt-bindings/dt-util.h" 3 4
-# 1 "C:/ncs/v2.3.0/zephyr/include/zephyr/sys/util_macro.h" 1 3 4
-# 34 "C:/ncs/v2.3.0/zephyr/include/zephyr/sys/util_macro.h" 3 4
-# 1 "C:/ncs/v2.3.0/zephyr/include/zephyr/sys/util_internal.h" 1 3 4
-# 18 "C:/ncs/v2.3.0/zephyr/include/zephyr/sys/util_internal.h" 3 4
-# 1 "C:/ncs/v2.3.0/zephyr/include/zephyr/sys/util_loops.h" 1 3 4
-# 19 "C:/ncs/v2.3.0/zephyr/include/zephyr/sys/util_internal.h" 2 3 4
-# 35 "C:/ncs/v2.3.0/zephyr/include/zephyr/sys/util_macro.h" 2 3 4
-# 20 "C:/ncs/v2.3.0/zephyr/include/zephyr/dt-bindings/dt-util.h" 2 3 4
-# 11 "C:/ncs/v2.3.0/zephyr/include/zephyr/dt-bindings/adc/nrf-adc.h" 2 3 4
-# 9 "C:/ncs/v2.3.0/zephyr/dts/arm/nordic/nrf_common.dtsi" 2 3 4
-# 1 "C:/ncs/v2.3.0/zephyr/include/zephyr/dt-bindings/gpio/gpio.h" 1 3 4
-# 10 "C:/ncs/v2.3.0/zephyr/dts/arm/nordic/nrf_common.dtsi" 2 3 4
-# 1 "C:/ncs/v2.3.0/zephyr/include/zephyr/dt-bindings/i2c/i2c.h" 1 3 4
-# 11 "C:/ncs/v2.3.0/zephyr/dts/arm/nordic/nrf_common.dtsi" 2 3 4
-# 1 "C:/ncs/v2.3.0/zephyr/include/zephyr/dt-bindings/pinctrl/nrf-pinctrl.h" 1 3 4
-# 12 "C:/ncs/v2.3.0/zephyr/dts/arm/nordic/nrf_common.dtsi" 2 3 4
-# 1 "C:/ncs/v2.3.0/zephyr/include/zephyr/dt-bindings/pwm/pwm.h" 1 3 4
-# 13 "C:/ncs/v2.3.0/zephyr/dts/arm/nordic/nrf_common.dtsi" 2 3 4
+# 1 "C:/ncs/v2.6.2/zephyr/include/zephyr/dt-bindings/adc/adc.h" 1 3 4
+# 8 "C:/ncs/v2.6.2/zephyr/dts/common/nordic/nrf_common.dtsi" 2 3 4
+# 1 "C:/ncs/v2.6.2/zephyr/include/zephyr/dt-bindings/adc/nrf-adc.h" 1 3 4
+# 10 "C:/ncs/v2.6.2/zephyr/include/zephyr/dt-bindings/adc/nrf-adc.h" 3 4
+# 1 "C:/ncs/v2.6.2/zephyr/include/zephyr/dt-bindings/dt-util.h" 1 3 4
+# 19 "C:/ncs/v2.6.2/zephyr/include/zephyr/dt-bindings/dt-util.h" 3 4
+# 1 "C:/ncs/v2.6.2/zephyr/include/zephyr/sys/util_macro.h" 1 3 4
+# 34 "C:/ncs/v2.6.2/zephyr/include/zephyr/sys/util_macro.h" 3 4
+# 1 "C:/ncs/v2.6.2/zephyr/include/zephyr/sys/util_internal.h" 1 3 4
+# 18 "C:/ncs/v2.6.2/zephyr/include/zephyr/sys/util_internal.h" 3 4
+# 1 "C:/ncs/v2.6.2/zephyr/include/zephyr/sys/util_loops.h" 1 3 4
+# 1083 "C:/ncs/v2.6.2/zephyr/include/zephyr/sys/util_loops.h" 3 4
+# 1 "C:/ncs/v2.6.2/zephyr/include/zephyr/sys/util_listify.h" 1 3 4
+# 1084 "C:/ncs/v2.6.2/zephyr/include/zephyr/sys/util_loops.h" 2 3 4
+# 19 "C:/ncs/v2.6.2/zephyr/include/zephyr/sys/util_internal.h" 2 3 4
+# 153 "C:/ncs/v2.6.2/zephyr/include/zephyr/sys/util_internal.h" 3 4
+# 1 "C:/ncs/v2.6.2/zephyr/include/zephyr/sys/util_internal_is_eq.h" 1 3 4
+# 154 "C:/ncs/v2.6.2/zephyr/include/zephyr/sys/util_internal.h" 2 3 4
+# 184 "C:/ncs/v2.6.2/zephyr/include/zephyr/sys/util_internal.h" 3 4
+# 1 "C:/ncs/v2.6.2/zephyr/include/zephyr/sys/util_internal_util_inc.h" 1 3 4
+# 185 "C:/ncs/v2.6.2/zephyr/include/zephyr/sys/util_internal.h" 2 3 4
 
-# 1 "C:/ncs/v2.3.0/zephyr/dts/common/freq.h" 1 3 4
-# 15 "C:/ncs/v2.3.0/zephyr/dts/arm/nordic/nrf_common.dtsi" 2 3 4
-# 1 "C:/ncs/v2.3.0/zephyr/dts/arm/nordic/override.dtsi" 1 3 4
-# 16 "C:/ncs/v2.3.0/zephyr/dts/arm/nordic/nrf_common.dtsi" 2 3 4
-# 24 "C:/ncs/v2.3.0/zephyr/dts/arm/nordic/nrf_common.dtsi" 3 4
+
+# 1 "C:/ncs/v2.6.2/zephyr/include/zephyr/sys/util_internal_util_dec.h" 1 3 4
+# 188 "C:/ncs/v2.6.2/zephyr/include/zephyr/sys/util_internal.h" 2 3 4
+
+
+# 1 "C:/ncs/v2.6.2/zephyr/include/zephyr/sys/util_internal_util_x2.h" 1 3 4
+# 191 "C:/ncs/v2.6.2/zephyr/include/zephyr/sys/util_internal.h" 2 3 4
+# 35 "C:/ncs/v2.6.2/zephyr/include/zephyr/sys/util_macro.h" 2 3 4
+# 20 "C:/ncs/v2.6.2/zephyr/include/zephyr/dt-bindings/dt-util.h" 2 3 4
+# 11 "C:/ncs/v2.6.2/zephyr/include/zephyr/dt-bindings/adc/nrf-adc.h" 2 3 4
+# 9 "C:/ncs/v2.6.2/zephyr/dts/common/nordic/nrf_common.dtsi" 2 3 4
+# 1 "C:/ncs/v2.6.2/zephyr/include/zephyr/dt-bindings/gpio/gpio.h" 1 3 4
+# 10 "C:/ncs/v2.6.2/zephyr/dts/common/nordic/nrf_common.dtsi" 2 3 4
+# 1 "C:/ncs/v2.6.2/zephyr/include/zephyr/dt-bindings/i2c/i2c.h" 1 3 4
+# 11 "C:/ncs/v2.6.2/zephyr/dts/common/nordic/nrf_common.dtsi" 2 3 4
+# 1 "C:/ncs/v2.6.2/zephyr/include/zephyr/dt-bindings/input/input-event-codes.h" 1 3 4
+# 12 "C:/ncs/v2.6.2/zephyr/dts/common/nordic/nrf_common.dtsi" 2 3 4
+# 1 "C:/ncs/v2.6.2/zephyr/include/zephyr/dt-bindings/pinctrl/nrf-pinctrl.h" 1 3 4
+# 13 "C:/ncs/v2.6.2/zephyr/dts/common/nordic/nrf_common.dtsi" 2 3 4
+# 1 "C:/ncs/v2.6.2/zephyr/include/zephyr/dt-bindings/pwm/pwm.h" 1 3 4
+# 14 "C:/ncs/v2.6.2/zephyr/dts/common/nordic/nrf_common.dtsi" 2 3 4
+
+# 1 "C:/ncs/v2.6.2/zephyr/dts/common/freq.h" 1 3 4
+# 16 "C:/ncs/v2.6.2/zephyr/dts/common/nordic/nrf_common.dtsi" 2 3 4
+# 1 "C:/ncs/v2.6.2/zephyr/dts/arm/nordic/override.dtsi" 1 3 4
+# 17 "C:/ncs/v2.6.2/zephyr/dts/common/nordic/nrf_common.dtsi" 2 3 4
+# 25 "C:/ncs/v2.6.2/zephyr/dts/common/nordic/nrf_common.dtsi" 3 4
 / {
  pinctrl: pin-controller {
 
@@ -106,16 +125,16 @@
   compatible = "zephyr,bt-hci-entropy";
   status = "okay";
  };
+
+ sw_pwm: sw-pwm {
+  compatible = "nordic,nrf-sw-pwm";
+  status = "disabled";
+  generator = <&timer1>;
+  clock-prescaler = <0>;
+  #pwm-cells = <3>;
+ };
 };
-
-&systick {
-
-
-
-
- status = "disabled";
-};
-# 11 "C:/ncs/v2.3.0/zephyr/dts/arm/nordic/nrf5340_cpuappns.dtsi" 2 3 4
+# 11 "C:/ncs/v2.6.2/zephyr/dts/arm/nordic/nrf5340_cpuappns.dtsi" 2 3 4
 
 / {
  cpus {
@@ -154,7 +173,7 @@
 
 
 
-# 1 "C:/ncs/v2.3.0/zephyr/dts/arm/nordic/nrf5340_cpuapp_peripherals.dtsi" 1 3 4
+# 1 "C:/ncs/v2.6.2/zephyr/dts/arm/nordic/nrf5340_cpuapp_peripherals.dtsi" 1 3 4
 
 
 
@@ -191,6 +210,24 @@ power: power@5000 {
  reg = <0x5000 0x1000>;
  interrupts = <5 1>;
  status = "okay";
+ #address-cells = <1>;
+ #size-cells = <1>;
+
+ gpregret1: gpregret1@551c {
+  #address-cells = <1>;
+  #size-cells = <1>;
+  compatible = "nordic,nrf-gpregret";
+  reg = <0x551c 0x1>;
+  status = "okay";
+ };
+
+ gpregret2: gpregret2@5520 {
+  #address-cells = <1>;
+  #size-cells = <1>;
+  compatible = "nordic,nrf-gpregret";
+  reg = <0x5520 0x1>;
+  status = "okay";
+ };
 };
 
 reset: reset-controller@5000 {
@@ -217,6 +254,7 @@ i2c0: i2c@8000 {
  reg = <0x8000 0x1000>;
  clock-frequency = <100000>;
  interrupts = <8 1>;
+ easydma-maxcnt-bits = <16>;
  status = "disabled";
 };
 
@@ -233,6 +271,7 @@ spi0: spi@8000 {
  reg = <0x8000 0x1000>;
  interrupts = <8 1>;
  max-frequency = <((8) * 1000 * 1000)>;
+ easydma-maxcnt-bits = <16>;
  status = "disabled";
 };
 
@@ -256,6 +295,7 @@ i2c1: i2c@9000 {
  reg = <0x9000 0x1000>;
  clock-frequency = <100000>;
  interrupts = <9 1>;
+ easydma-maxcnt-bits = <16>;
  status = "disabled";
 };
 
@@ -272,6 +312,7 @@ spi1: spi@9000 {
  reg = <0x9000 0x1000>;
  interrupts = <9 1>;
  max-frequency = <((8) * 1000 * 1000)>;
+ easydma-maxcnt-bits = <16>;
  status = "disabled";
 };
 
@@ -289,6 +330,7 @@ spi4: spi@a000 {
  reg = <0xa000 0x1000>;
  interrupts = <10 1>;
  max-frequency = <((32) * 1000 * 1000)>;
+ easydma-maxcnt-bits = <16>;
  rx-delay-supported;
  rx-delay = <2>;
  status = "disabled";
@@ -307,6 +349,7 @@ i2c2: i2c@b000 {
  reg = <0xb000 0x1000>;
  clock-frequency = <100000>;
  interrupts = <11 1>;
+ easydma-maxcnt-bits = <16>;
  status = "disabled";
 };
 
@@ -323,6 +366,7 @@ spi2: spi@b000 {
  reg = <0xb000 0x1000>;
  interrupts = <11 1>;
  max-frequency = <((8) * 1000 * 1000)>;
+ easydma-maxcnt-bits = <16>;
  status = "disabled";
 };
 
@@ -346,6 +390,7 @@ i2c3: i2c@c000 {
  reg = <0xc000 0x1000>;
  clock-frequency = <100000>;
  interrupts = <12 1>;
+ easydma-maxcnt-bits = <16>;
  status = "disabled";
 };
 
@@ -362,6 +407,7 @@ spi3: spi@c000 {
  reg = <0xc000 0x1000>;
  interrupts = <12 1>;
  max-frequency = <((8) * 1000 * 1000)>;
+ easydma-maxcnt-bits = <16>;
  status = "disabled";
 };
 
@@ -385,6 +431,7 @@ timer0: timer@f000 {
  status = "disabled";
  reg = <0xf000 0x1000>;
  cc-num = <6>;
+ max-bit-width = <32>;
  interrupts = <15 1>;
  prescaler = <0>;
 };
@@ -394,6 +441,7 @@ timer1: timer@10000 {
  status = "disabled";
  reg = <0x10000 0x1000>;
  cc-num = <6>;
+ max-bit-width = <32>;
  interrupts = <16 1>;
  prescaler = <0>;
 };
@@ -403,6 +451,7 @@ timer2: timer@11000 {
  status = "disabled";
  reg = <0x11000 0x1000>;
  cc-num = <6>;
+ max-bit-width = <32>;
  interrupts = <17 1>;
  prescaler = <0>;
 };
@@ -412,7 +461,7 @@ rtc0: rtc@14000 {
  reg = <0x14000 0x1000>;
  cc-num = <4>;
  interrupts = <20 1>;
- status = "okay";
+ status = "disabled";
  clock-frequency = <32768>;
  prescaler = <1>;
 };
@@ -422,7 +471,7 @@ rtc1: rtc@15000 {
  reg = <0x15000 0x1000>;
  cc-num = <4>;
  interrupts = <21 1>;
- status = "okay";
+ status = "disabled";
  clock-frequency = <32768>;
  prescaler = <1>;
 };
@@ -575,7 +624,7 @@ nfct: nfct@2d000 {
  compatible = "nordic,nrf-nfct";
  reg = <0x2d000 0x1000>;
  interrupts = <45 1>;
- status = "disabled";
+ status = "okay";
 };
 
 mutex: mutex@30000 {
@@ -653,6 +702,7 @@ gpio0: gpio@842500 {
  #gpio-cells = <2>;
  status = "disabled";
  port = <0>;
+ gpiote-instance = <&gpiote>;
 };
 
 gpio1: gpio@842800 {
@@ -663,19 +713,33 @@ gpio1: gpio@842800 {
  ngpios = <16>;
  status = "disabled";
  port = <1>;
+ gpiote-instance = <&gpiote>;
 };
 
 ieee802154: ieee802154 {
  compatible = "nordic,nrf-ieee802154";
  status = "disabled";
 };
-# 50 "C:/ncs/v2.3.0/zephyr/dts/arm/nordic/nrf5340_cpuappns.dtsi" 2 3 4
+# 50 "C:/ncs/v2.6.2/zephyr/dts/arm/nordic/nrf5340_cpuappns.dtsi" 2 3 4
+  };
+
+
+
+
+
+
+  gpiote: gpiote1: gpiote@4002f000 {
+   compatible = "nordic,nrf-gpiote";
+   reg = <0x4002f000 0x1000>;
+   interrupts = <47 5>;
+   status = "disabled";
+   instance = <1>;
   };
  };
 
 
  ipc {
-# 1 "C:/ncs/v2.3.0/zephyr/dts/arm/nordic/nrf5340_cpuapp_ipc.dtsi" 1 3 4
+# 1 "C:/ncs/v2.6.2/zephyr/dts/arm/nordic/nrf5340_cpuapp_ipc.dtsi" 1 3 4
 
 
 
@@ -690,7 +754,7 @@ ipc0: ipc0 {
  role = "host";
  status = "okay";
 };
-# 56 "C:/ncs/v2.3.0/zephyr/dts/arm/nordic/nrf5340_cpuappns.dtsi" 2 3 4
+# 69 "C:/ncs/v2.6.2/zephyr/dts/arm/nordic/nrf5340_cpuappns.dtsi" 2 3 4
  };
 
  psa_rng: psa-rng {
@@ -703,27 +767,11 @@ ipc0: ipc0 {
  arm,num-irq-priority-bits = <3>;
 };
 
+&systick {
 
-
-
-
-
-
-# 1 "C:/ncs/v2.3.0/zephyr/dts/arm/nordic/nrf5340_cpuapp_peripherals_ns.dtsi" 1 3 4
-# 11 "C:/ncs/v2.3.0/zephyr/dts/arm/nordic/nrf5340_cpuapp_peripherals_ns.dtsi" 3 4
-/ {
- soc {
-  gpiote1: gpiote@4002f000 {
-   compatible = "nordic,nrf-gpiote";
-   reg = <0x4002f000 0x1000>;
-   interrupts = <47 5>;
-   status = "disabled";
-  };
- };
+ status = "disabled";
 };
-# 75 "C:/ncs/v2.3.0/zephyr/dts/arm/nordic/nrf5340_cpuappns.dtsi" 2 3 4
-gpiote: &gpiote1 {};
-# 9 "C:/ncs/v2.3.0/zephyr/dts/arm/nordic/nrf5340_cpuappns_qkaa.dtsi" 2 3 4
+# 9 "C:/ncs/v2.6.2/zephyr/dts/arm/nordic/nrf5340_cpuappns_qkaa.dtsi" 2 3 4
 
 &flash0 {
  reg = <0x00000000 ((1024) * 1024)>;
@@ -739,17 +787,18 @@ gpiote: &gpiote1 {};
 
 / {
  soc {
-  compatible = "nordic,nRF5340-CPUAPP-QKAA", "nordic,nRF5340-CPUAPP", "nordic,nRF53", "simple-bus";
+  compatible = "nordic,nrf5340-cpuapp-qkaa", "nordic,nrf5340-cpuapp",
+        "nordic,nrf53", "simple-bus";
  };
 };
-# 9 "C:/ncs/v2.3.0/nrf/boards/arm/nrf7002dk_nrf5340/nrf7002dk_nrf5340_cpuapp_ns.dts" 2
-# 1 "C:/ncs/v2.3.0/nrf/boards/arm/nrf7002dk_nrf5340/nrf5340_cpuapp_common.dts" 1
+# 9 "C:/ncs/v2.6.2/nrf/boards/arm/nrf7002dk_nrf5340/nrf7002dk_nrf5340_cpuapp_ns.dts" 2
+# 1 "C:/ncs/v2.6.2/nrf/boards/arm/nrf7002dk_nrf5340/nrf5340_cpuapp_common.dts" 1
 
 
 
 
 
-# 1 "C:/ncs/v2.3.0/nrf/boards/arm/nrf7002dk_nrf5340/nrf5340_cpuapp_common-pinctrl.dtsi" 1
+# 1 "C:/ncs/v2.6.2/nrf/boards/arm/nrf7002dk_nrf5340/nrf5340_cpuapp_common-pinctrl.dtsi" 1
 &pinctrl {
  i2c1_default: i2c1_default {
   group1 {
@@ -877,7 +926,7 @@ gpiote: &gpiote1 {};
  };
 
 };
-# 7 "C:/ncs/v2.3.0/nrf/boards/arm/nrf7002dk_nrf5340/nrf5340_cpuapp_common.dts" 2
+# 7 "C:/ncs/v2.6.2/nrf/boards/arm/nrf7002dk_nrf5340/nrf5340_cpuapp_common.dts" 2
 
 / {
 
@@ -887,7 +936,7 @@ gpiote: &gpiote1 {};
   zephyr,uart-mcumgr = &uart0;
   zephyr,bt-mon-uart = &uart0;
   zephyr,bt-c2h-uart = &uart0;
-  zephyr,bt-hci-rpmsg-ipc = &ipc0;
+  zephyr,bt-hci-ipc = &ipc0;
   nordic,802154-spinel-ipc = &ipc0;
   zephyr,ieee802154 = &ieee802154;
  };
@@ -981,6 +1030,11 @@ gpiote: &gpiote1 {};
   btrf-switch-gpios = <&gpio1 10 (0 << 0)>;
  };
 
+ nordic_wlan0: nordic_wlan0 {
+  compatible = "nordic,wlan0";
+  status = "okay";
+ };
+
 
  aliases {
   led0 = &led0;
@@ -1064,9 +1118,9 @@ arduino_i2c: &i2c1 {
  pinctrl-0 = <&qspi_default>;
  pinctrl-1 = <&qspi_sleep>;
  pinctrl-names = "default", "sleep";
- nrf7002: nrf7002@1 {
+ nrf700x: nrf7002@1 {
   status = "okay";
-  compatible = "nordic,nrf7002-qspi";
+  compatible = "nordic,nrf700x-qspi";
   reg = <1>;
   sck-frequency = <24000000>;
   quad-mode;
@@ -1075,18 +1129,6 @@ arduino_i2c: &i2c1 {
   bucken-gpios = <&gpio0 12 (0 << 0)>;
   host-irq-gpios = <&gpio0 23 (0 << 0)>;
  };
-};
-
-&timer0 {
- status = "okay";
-};
-
-&timer1 {
- status = "okay";
-};
-
-&timer2 {
- status = "okay";
 };
 
 arduino_serial: &uart1 {
@@ -1170,8 +1212,8 @@ zephyr_udc0: &usbd {
 };
 
 
-# 1 "C:/ncs/v2.3.0/nrf/boards/arm/nrf7002dk_nrf5340/nrf5340_cpuapp_partition_conf.dts" 1
-# 24 "C:/ncs/v2.3.0/nrf/boards/arm/nrf7002dk_nrf5340/nrf5340_cpuapp_partition_conf.dts"
+# 1 "C:/ncs/v2.6.2/nrf/boards/arm/nrf7002dk_nrf5340/nrf5340_cpuapp_partition_conf.dts" 1
+# 24 "C:/ncs/v2.6.2/nrf/boards/arm/nrf7002dk_nrf5340/nrf5340_cpuapp_partition_conf.dts"
 &slot0_partition {
  reg = <0x00010000 0x40000>;
 };
@@ -1187,7 +1229,7 @@ zephyr_udc0: &usbd {
 &slot1_ns_partition {
  reg = <0x000c0000 0x30000>;
 };
-# 47 "C:/ncs/v2.3.0/nrf/boards/arm/nrf7002dk_nrf5340/nrf5340_cpuapp_partition_conf.dts"
+# 47 "C:/ncs/v2.6.2/nrf/boards/arm/nrf7002dk_nrf5340/nrf5340_cpuapp_partition_conf.dts"
 &sram0_image {
  reg = <0x20000000 ((448) * 1024)>;
 };
@@ -1201,8 +1243,8 @@ zephyr_udc0: &usbd {
 };
 
 
-# 1 "C:/ncs/v2.3.0/nrf/boards/arm/nrf7002dk_nrf5340/nrf5340_shared_sram_planning_conf.dts" 1
-# 14 "C:/ncs/v2.3.0/nrf/boards/arm/nrf7002dk_nrf5340/nrf5340_shared_sram_planning_conf.dts"
+# 1 "C:/ncs/v2.6.2/nrf/boards/arm/nrf7002dk_nrf5340/nrf5340_shared_sram_planning_conf.dts" 1
+# 14 "C:/ncs/v2.6.2/nrf/boards/arm/nrf7002dk_nrf5340/nrf5340_shared_sram_planning_conf.dts"
 / {
  chosen {
 
@@ -1220,9 +1262,9 @@ zephyr_udc0: &usbd {
   };
  };
 };
-# 61 "C:/ncs/v2.3.0/nrf/boards/arm/nrf7002dk_nrf5340/nrf5340_cpuapp_partition_conf.dts" 2
-# 300 "C:/ncs/v2.3.0/nrf/boards/arm/nrf7002dk_nrf5340/nrf5340_cpuapp_common.dts" 2
-# 10 "C:/ncs/v2.3.0/nrf/boards/arm/nrf7002dk_nrf5340/nrf7002dk_nrf5340_cpuapp_ns.dts" 2
+# 61 "C:/ncs/v2.6.2/nrf/boards/arm/nrf7002dk_nrf5340/nrf5340_cpuapp_partition_conf.dts" 2
+# 293 "C:/ncs/v2.6.2/nrf/boards/arm/nrf7002dk_nrf5340/nrf5340_cpuapp_common.dts" 2
+# 10 "C:/ncs/v2.6.2/nrf/boards/arm/nrf7002dk_nrf5340/nrf7002dk_nrf5340_cpuapp_ns.dts" 2
 
 / {
  model = "Nordic NRF5340 DK NRF5340 Application";
@@ -1232,7 +1274,28 @@ zephyr_udc0: &usbd {
   zephyr,sram = &sram0_ns;
   zephyr,flash = &flash0;
   zephyr,code-partition = &slot0_ns_partition;
+  zephyr,entropy = &psa_rng;
+  zephyr,wifi = &nordic_wlan0;
+ };
+
+ psa_rng: psa-rng {
+  compatible = "zephyr,psa-crypto-rng";
+  status = "okay";
+ };
+
+ nrf70_tx_power_ceiling: nrf70_tx_power_ceiling_node {
+  status = "okay";
+  compatible = "nordic,nrf700x-tx-power-ceiling";
+  max-pwr-2g-dsss = <0x54>;
+  max-pwr-2g-mcs0 = <0x40>;
+  max-pwr-2g-mcs7 = <0x40>;
+  max-pwr-5g-low-mcs0 = <0x24>;
+  max-pwr-5g-low-mcs7 = <0x24>;
+  max-pwr-5g-mid-mcs0 = <0x2C>;
+  max-pwr-5g-mid-mcs7 = <0x2C>;
+  max-pwr-5g-high-mcs0 = <0x34>;
+  max-pwr-5g-high-mcs7 = <0x34>;
  };
 };
 # 0 "<command-line>" 2
-# 1 "C:/ncs/v2.3.0/zephyr/misc/empty_file.c"
+# 1 "C:/ncs/v2.6.2/zephyr/misc/empty_file.c"

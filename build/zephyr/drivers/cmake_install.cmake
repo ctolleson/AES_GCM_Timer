@@ -1,4 +1,4 @@
-# Install script for directory: C:/ncs/v2.3.0/zephyr/drivers
+# Install script for directory: C:/ncs/v2.6.2/zephyr/drivers
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,71 +34,71 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/ncs/toolchains/v2.3.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-objdump.exe")
+  set(CMAKE_OBJDUMP "C:/ncs/toolchains/cf2149caf2/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-objdump.exe")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/ChrisTolleson/git/aes_gcm/build/zephyr/drivers/interrupt_controller/cmake_install.cmake")
+  include("C:/Git/AES_GCM_Timer/build/zephyr/drivers/disk/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/ChrisTolleson/git/aes_gcm/build/zephyr/drivers/misc/cmake_install.cmake")
+  include("C:/Git/AES_GCM_Timer/build/zephyr/drivers/interrupt_controller/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/ChrisTolleson/git/aes_gcm/build/zephyr/drivers/pcie/cmake_install.cmake")
+  include("C:/Git/AES_GCM_Timer/build/zephyr/drivers/misc/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/ChrisTolleson/git/aes_gcm/build/zephyr/drivers/disk/cmake_install.cmake")
+  include("C:/Git/AES_GCM_Timer/build/zephyr/drivers/pcie/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/ChrisTolleson/git/aes_gcm/build/zephyr/drivers/usb/cmake_install.cmake")
+  include("C:/Git/AES_GCM_Timer/build/zephyr/drivers/usb/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/ChrisTolleson/git/aes_gcm/build/zephyr/drivers/usb_c/cmake_install.cmake")
+  include("C:/Git/AES_GCM_Timer/build/zephyr/drivers/usb_c/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/ChrisTolleson/git/aes_gcm/build/zephyr/drivers/clock_control/cmake_install.cmake")
+  include("C:/Git/AES_GCM_Timer/build/zephyr/drivers/clock_control/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/ChrisTolleson/git/aes_gcm/build/zephyr/drivers/console/cmake_install.cmake")
+  include("C:/Git/AES_GCM_Timer/build/zephyr/drivers/console/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/ChrisTolleson/git/aes_gcm/build/zephyr/drivers/gpio/cmake_install.cmake")
+  include("C:/Git/AES_GCM_Timer/build/zephyr/drivers/gpio/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/ChrisTolleson/git/aes_gcm/build/zephyr/drivers/serial/cmake_install.cmake")
+  include("C:/Git/AES_GCM_Timer/build/zephyr/drivers/mbox/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/ChrisTolleson/git/aes_gcm/build/zephyr/drivers/timer/cmake_install.cmake")
+  include("C:/Git/AES_GCM_Timer/build/zephyr/drivers/pinctrl/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/ChrisTolleson/git/aes_gcm/build/zephyr/drivers/pinctrl/cmake_install.cmake")
+  include("C:/Git/AES_GCM_Timer/build/zephyr/drivers/serial/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/ChrisTolleson/git/aes_gcm/build/zephyr/drivers/mbox/cmake_install.cmake")
+  include("C:/Git/AES_GCM_Timer/build/zephyr/drivers/timer/cmake_install.cmake")
 endif()
 

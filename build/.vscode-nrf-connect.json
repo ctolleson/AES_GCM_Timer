@@ -1,7 +1,7 @@
 {
   "board": "nrf7002dk_nrf5340_cpuapp_ns",
   "boardRevision": "",
-  "boardDir": "c:/ncs/v2.3.0/nrf/boards/arm/nrf7002dk_nrf5340",
+  "boardDir": "c:/ncs/v2.6.2/nrf/boards/arm/nrf7002dk_nrf5340",
   "shouldBuild": true,
   "optimizations": "debug",
   "cmakeArgs": [],
