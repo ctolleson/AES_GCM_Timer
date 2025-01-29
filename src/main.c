@@ -12,7 +12,6 @@
  * 
  */
 
-
 /*
  * Copyright (c) 2021 Nordic Semiconductor ASA
  *
@@ -40,18 +39,12 @@
 #include <psa/crypto.h>
 #include <psa/crypto_extra.h>
 
-
-
-#define CAPTURE_TIMING 
-
-
-#ifdef	CAPTURE_TIMING
-#include <zephyr/timing/timing.h>
-#endif 
-
 #ifdef CONFIG_BUILD_WITH_TFM
 #include <tfm_ns_interface.h>
 #endif
+
+
+#include <zephyr/timing/timing.h>
 
 #define APP_SUCCESS             (0)
 #define APP_ERROR               (-1)
@@ -169,8 +162,18 @@ int encrypt_aes_gcm(void)
 		LOG_INF("psa_generate_random failed! (Error: %d)", status);
 		return APP_ERROR;
 	}
+	
+	
+	timing_t start_time, end_time;
+	uint64_t total_cycles;
+	uint64_t total_ns;
+
+	timing_init();
+	timing_start();
 
 	/* Encrypt the plaintext and create the authentication tag */
+	start_time = timing_counter_get();
+	
 	status = psa_aead_encrypt(key_id,
 				  PSA_ALG_GCM,
 				  m_iv,
@@ -182,6 +185,17 @@ int encrypt_aes_gcm(void)
 				  m_encrypted_text,
 				  sizeof(m_encrypted_text),
 				  &output_len);
+	
+	end_time = timing_counter_get();
+	
+	total_cycles = timing_cycles_get(&start_time, &end_time);
+	total_ns = timing_cycles_to_ns(total_cycles);
+	
+	timing_stop();
+
+	//printk("Total nanoseconds to run encrypt AES GCM is %llu\n",total_ns);
+	LOG_INF("Total nanoseconds to run encrypt AES GCM is %llu\n", total_ns); 
+
 	if (status != PSA_SUCCESS) {
 		LOG_INF("psa_aead_encrypt failed! (Error: %d)", status);
 		return APP_ERROR;
@@ -237,19 +251,6 @@ int main(void)
 {
 	int status;
 
-	#ifdef	CAPTURE_TIMING
-
-		//variables needed for capturing the time elapsed.
-		timing_t start_time, end_time;
-		uint64_t total_cycles;
-		uint64_t total_ns;
-
-		// initiate the timer and start it counting...
-		timing_init();
-		timing_start(); 
-
-	#endif
-
 	LOG_INF("Starting AES-GCM example...");
 
 	status = crypto_init();
@@ -264,35 +265,20 @@ int main(void)
 		return APP_ERROR;
 	}
 
-	#ifdef	CAPTURE_TIMING
-		start_time = timing_counter_get();
-	#endif
-
 	status = encrypt_aes_gcm();
-	
-	#ifdef CAPTURE_TIMING
-		end_time = timing_counter_get();
-		
-		total_cycles = timing_cycles_get(&start_time, &end_time);
-		total_ns = timing_cycles_to_ns(total_cycles);
-		//total_ms = total_ns/1000000.0;
-
-		timing_stop();
-
-		printk("Total nanoseconds to run encrypt AES GCM is %llu\n",total_ns);
-		LOG_INF("Total nanoseconds to run encrypt AES GCM is %llu\n", total_ns); 
-	#endif
-	
 	if (status != APP_SUCCESS) {
 		LOG_INF(APP_ERROR_MESSAGE);
 		return APP_ERROR;
 	}
+	
 
+		
 	status = decrypt_aes_gcm();
 	if (status != APP_SUCCESS) {
 		LOG_INF(APP_ERROR_MESSAGE);
 		return APP_ERROR;
 	}
+
 
 	status = crypto_finish();
 	if (status != APP_SUCCESS) {

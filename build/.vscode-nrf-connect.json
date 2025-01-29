@@ -1,9 +1,14 @@
 {
-  "board": "nrf7002dk_nrf5340_cpuapp_ns",
+  "toolchainPath": "c:\\ncs\\toolchains\\b620d30767",
+  "sdkPath": "c:\\ncs\\v2.9.0",
+  "board": "nrf5340dk/nrf5340/cpuapp",
+  "boardDirs": [
+    "c:\\ncs\\v2.9.0\\zephyr\\boards\\nordic\\nrf5340dk"
+  ],
   "boardRevision": "",
-  "boardDir": "c:/ncs/v2.6.2/nrf/boards/arm/nrf7002dk_nrf5340",
+  "boardDir": "c:\\ncs\\v2.9.0\\zephyr\\boards\\nordic\\nrf5340dk",
   "shouldBuild": true,
-  "optimizations": "debug",
+  "optimizations": "none",
   "cmakeArgs": [],
   "confFiles": [],
   "buildDirectory": "build",
