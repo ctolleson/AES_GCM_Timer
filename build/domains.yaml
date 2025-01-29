@@ -1,7 +1,0 @@
-default: AES_GCM_Timer
-build_dir: C:/Git/AES_GCM_Timer/build
-domains:
-  - name: AES_GCM_Timer
-    build_dir: C:/Git/AES_GCM_Timer/build/AES_GCM_Timer
-flash_order:
-  - AES_GCM_Timer
